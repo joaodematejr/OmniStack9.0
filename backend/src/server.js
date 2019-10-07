@@ -17,7 +17,7 @@ mongoose.connect('mongodb+srv://joaodematejr:joaodematejr@cluster0-ardag.mongodb
 //req.params = ACESSAR ROUTE PARAMS (PARA EDITAR E DELETAR)
 //req.body = ACESSAR CORPO DA REQUISIÇÃO (PARA CRIAÇÃO, EDIÇÃO)
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); 
 app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
